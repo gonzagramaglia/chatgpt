@@ -2,7 +2,7 @@ import bot from './assets/bot.svg';
 import user from './assets/bot.svg';
 
 const form = document.querySelector('form');
-const chatContainer = document.querySelector('chat-container');
+const chatContainer = document.querySelector('#chat-container');
 
 let loadInterval;
 
@@ -13,7 +13,7 @@ function loader(element) {
     element.textContent += '.';
 
     if(element.textContent === '....'){
-      element.textContent === ''
+      element.textContent = ''
     }
   }, 300);
 }
@@ -23,7 +23,7 @@ function typeText(element, text){
 
   let interval = setInterval(() => {
     if(index < text.length){
-      element.innerHTML += text.chartAt(index);
+      element.innerHTML += text.charAt(index);
       index++
     }else {
       clearInterval(interval)
@@ -52,8 +52,7 @@ function chatStripe(isAi, value, uniqueId){
           <div 
             class='message' 
             id=${uniqueId}
-          >
-            ${value}
+          >${value}
           </div>
         </div>
       </div>
@@ -64,7 +63,7 @@ function chatStripe(isAi, value, uniqueId){
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const data = new FormData(data);
+  const data = new FormData(form);
 
   //user's chatstripe
   chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
