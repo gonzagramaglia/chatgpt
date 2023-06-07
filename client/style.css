@@ -121,6 +121,7 @@ form {
   flex-direction: row;
   gap: 10px;
   margin-bottom: 30px;
+  border-radius: 7px;
 }
 
 textarea {
