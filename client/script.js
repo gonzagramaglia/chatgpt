@@ -105,7 +105,7 @@ const handleSubmit = async (e) => {
   } else {
     const err = await response.text();
 
-    messageDiv.innerHTML = "Ups, looks like something went wrong";
+    messageDiv.innerHTML = "🧪💥 Ups, looks like something went wrong. But ironically that's normal! This is how knowledge develops 😜";
 
     alert(err)
   }
