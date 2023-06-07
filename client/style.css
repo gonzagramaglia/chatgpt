@@ -113,13 +113,14 @@ body {
 }
 
 form {
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   padding: 10px;
   background: #40414F;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-bottom: 30px;
 }
 
 textarea {
